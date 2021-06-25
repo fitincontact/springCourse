@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:musicPlayer7.properties"/>
+
+
+    <bean id="classic"
+          class="sp7.ClassicalMusic">
+    </bean>
+    <bean id="rock"
+          class="sp7.RockMusic">
+    </bean>
+    <!--    <bean id="player"-->
+    <!--          class="sp7.MusicPlayer">-->
+    <!--        <constructor-arg ref = "classic"/>-->
+    <!--    </bean>-->
+    <bean id="player"
+          class="sp7.MusicPlayer"
+          scope="prototype"
+    >
+
+        <property name="music" ref="classic"/>
+        <!--        <property name="name"  value="KUbviuvbkhbkb"/>-->
+        <property name="name" value="${musicPlayer.name}"/>
+    </bean>
+</beans>

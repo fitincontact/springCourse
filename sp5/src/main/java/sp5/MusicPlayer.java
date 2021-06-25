@@ -1,4 +1,4 @@
-package sp3;
+package sp5;
 
 public class MusicPlayer {
     private Music music;

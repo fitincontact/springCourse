@@ -1,4 +1,4 @@
-package sp5;
+package sp7;
 
 public class ClassicalMusic implements Music{
     @Override

@@ -1,4 +1,4 @@
-package sp5;
+package sp6;
 
 public class RockMusic implements Music{
     @Override

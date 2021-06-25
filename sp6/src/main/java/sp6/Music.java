@@ -1,4 +1,4 @@
-package sp5;
+package sp6;
 
 public interface Music {
     String getSong();

@@ -5,9 +5,13 @@
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="classic"
-          class="sp3.ClassicalMusic">
+          class="sp5.ClassicalMusic">
     </bean>
     <bean id="rock"
-          class="sp3.RockMusic">
+          class="sp5.RockMusic">
+    </bean>
+    <bean id="player"
+          class="sp5.MusicPlayer">
+        <constructor-arg ref = "classic"/>
     </bean>
 </beans>
